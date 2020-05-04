@@ -1,0 +1,6 @@
+<h1>Login</h1>
+<%= form_with model: @sessions do |f| %>
+    <%= f.text_field :username %>
+    <%= f.email_field :email %>
+    <%= f.submit %>
+<% end %>
