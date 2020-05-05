@@ -1,2 +1,12 @@
 <%= @user.name %>
+<br>
 <%= @user.username %>
+<br>
+<br>
+
+Events:
+<br>
+
+<% @user.events.each do |event| %>
+    <%= event.name %>
+<% end %>
