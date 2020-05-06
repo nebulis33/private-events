@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_04_005527) do
+ActiveRecord::Schema.define(version: 2020_05_06_201809) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 2020_05_04_005527) do
     t.integer "creator_id"
     t.index ["creator_id"], name: "index_events_on_creator_id"
   end
+
+# Could not dump table "invitations" because of following StandardError
+#   Unknown type '' for column 'attended_event_id'
 
   create_table "users", force: :cascade do |t|
     t.string "name"
