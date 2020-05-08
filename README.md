@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails web app simulating the basic functionalities of Eventbrite.
 
-Things you may want to cover:
+Major functionalities:
 
-* Ruby version
+* Create an account (no password)
 
-* System dependencies
+* Create events
 
-* Configuration
+* Invite other users to your events
 
-* Database creation
+* Accept invites to other users events
 
-* Database initialization
+Technology info:
 
-* How to run the test suite
+* Rails 6.0.2.2
 
-* Services (job queues, cache servers, search engines, etc.)
+* Bulma
 
-* Deployment instructions
-
-* ...
+* Hosted on Heroku
