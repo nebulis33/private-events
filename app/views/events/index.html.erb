@@ -1,7 +1,17 @@
 <h1>All Events:</h1>
 <br>
-<% @event.each do |event| %>
+Upcoming Events:
+<br>
+<% if @upcoming_events %>
+    <% @upcoming_events.each do |event| %>
     <%= event.name %>
-    <%= event.created_at %>
-    <br>
+    <% end %>
+<% end %>
+<br>
+Past Events:
+<br>
+<% if @previous_events %>
+    <% @previous_events.each do |event| %>
+    <%= event.name %>
+    <% end %>
 <% end %>
