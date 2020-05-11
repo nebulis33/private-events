@@ -1,14 +1,17 @@
-<h1>Welcome</h1>
-<% if current_user %>
-  Logged in as <%= current_user.email %>.
-  <br>
-  User id: <%= current_user.id %>
-  <br>
-  <%= link_to "Log Out", logout_path %>
-<% else %>
-  <%= link_to "Sign Up", signup_path %> or 
-  <%= link_to "Log In", login_path %>
-<% end %><p id="notice"><%= notice %></p><h1>Example</h1>
-<p>Lorem ipsum …</p>
-
-<%#= button_to "Login", '/login', method: :get%><%= button_to "Sign Up", '/users/new', method: :get %>
+<div class="container">
+  <% if logged_on? %>
+    <div class="notification">
+      <h1 class="is-size-2">Welcome <%= current_user.username %>!</h1>
+      <p>Your user ID is: <%= current_user.id %>.</p>
+      <p class="is-size-4">What would you like to do today?</p>
+      <ul>
+        <li><%= link_to "Make a new event", new_event_url %></li>
+        <li><%= link_to "View events I've attended or are invited to", events_path %></li>
+      </ul>
+    </div>
+  <% else %>
+    <div class="notification">
+      <p>Please log in or create an account.</p>
+    </div>
+  <% end %>
+</div>
